@@ -31,3 +31,52 @@
 #yurbika's solution corrected by Developer-47
 # num = int(input("Number: "))
 # print(dict(enumerate([i*i for i in range(1, num+1)], 1)))
+
+"""4. Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.Suppose the following input is supplied to the program:"""
+
+#out=[]
+
+#for v in input('IN: '):
+  #if v == ',':
+    #continue
+  #else:
+    #out.append(v)
+    
+#print(out, tuple(out))
+
+"""5. Define a class which has at least two methods:
+getString: to get a string from console input
+printString: to print the string in upper case.
+Also please include simple test function to test the class methods."""
+
+class Capitalise:
+  def getString():
+    x = input('ENTER: ')
+    return(x)
+  def printString():
+    out = Capitalise.getString()
+    return print(str(out).upper())
+  
+x = Capitalise
+x.printString()
+
+"""
+6. Write a program that calculates and prints the value according to the given formula:
+
+Q = Square root of [(2 _ C _ D)/H]
+Following are the fixed values of C and H:
+
+C is 50. H is 30.
+
+D is the variable whose values should be input to your program in a comma-separated sequence.For example Let us assume the following comma separated input sequence is given to the program
+
+"""
+
+def calculator(d):
+  output = []
+  
+  
+  
+  
+  
+    
