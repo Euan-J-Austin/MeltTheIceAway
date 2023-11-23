@@ -49,16 +49,16 @@ getString: to get a string from console input
 printString: to print the string in upper case.
 Also please include simple test function to test the class methods."""
 
-class Capitalise:
-  def getString():
-    x = input('ENTER: ')
-    return(x)
-  def printString():
-    out = Capitalise.getString()
-    return print(str(out).upper())
+# class Capitalise:
+#   def getString():
+#     x = input('ENTER: ')
+#     return(x)
+#   def printString():
+#     out = Capitalise.getString()
+#     return print(str(out).upper())
   
-x = Capitalise
-x.printString()
+# x = Capitalise
+# x.printString()
 
 """
 6. Write a program that calculates and prints the value according to the given formula:
@@ -71,9 +71,22 @@ C is 50. H is 30.
 D is the variable whose values should be input to your program in a comma-separated sequence.For example Let us assume the following comma separated input sequence is given to the program
 
 """
+import math as m
 
 def calculator(d):
-  output = []
+  for v in d.split(','):
+      print(m.sqrt(2*50*int(v)/30))
+
+calculator(input('ENTER A LIST OF COMMA-SEPARATED VALUES:'))
+
+"""
+7. _Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i _ j.*
+
+Note: i=0,1.., X-1; j=0,1,¡­Y-1. Suppose the following inputs are given to the program: 3,5
+
+Then, the output of the program should be:
+[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+"""
   
   
   
