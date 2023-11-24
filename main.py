@@ -71,13 +71,13 @@ C is 50. H is 30.
 D is the variable whose values should be input to your program in a comma-separated sequence.For example Let us assume the following comma separated input sequence is given to the program
 
 """
-import math as m
+# import math as m
 
-def calculator(d):
-  for v in d.split(','):
-      print(m.sqrt(2*50*int(v)/30))
+# def calculator(d):
+#   for v in d.split(','):
+#       print(m.sqrt(2*50*int(v)/30))
 
-calculator(input('ENTER A LIST OF COMMA-SEPARATED VALUES:'))
+# calculator(input('ENTER A LIST OF COMMA-SEPARATED VALUES:'))
 
 """
 7. _Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i _ j.*
@@ -87,6 +87,39 @@ Note: i=0,1.., X-1; j=0,1,¡­Y-1. Suppose the following inputs are given to the
 Then, the output of the program should be:
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
 """
+
+#X determines rows, Y determines columns
+#[0,0,0,0,0] as 0 row mutiplied by 0-4 columns
+#[0,1,2,3,4,5] as 1 row by 0-4 columns
+
+# def twoDimArr(i):
+#   x,y= int(i.split(',')[0]), int(i.split(',')[1])
+#   out = []
+#   row, col = 0, 0
+#   temp = []
+#   while x > 0:
+#     while len(temp) <= y-1:
+#       temp.append(row*col)
+#       col += 1
+#     out.append(temp)
+#     temp = []
+#     row += 1
+#     col = 0
+#     x += -1
+#   return print(out)
+
+# twoDimArr(input('ENTER TWO DIGITS:'))
+
+#darkprinx's solution
+
+x,y = map(int,input().split(','))
+lst = [[i*j for j in range(y)] for i in range(x)]
+print(lst)
+
+"""
+8  Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+"""
+  
   
   
   
