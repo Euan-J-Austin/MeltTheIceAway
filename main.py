@@ -112,14 +112,56 @@ Then, the output of the program should be:
 
 #darkprinx's solution
 
-x,y = map(int,input().split(','))
-lst = [[i*j for j in range(y)] for i in range(x)]
-print(lst)
+# x,y = map(int,input().split(','))
+# lst = [[i*j for j in range(y)] for i in range(x)]
+# print(lst)
 
 """
 8  Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+
 """
-  
+
+# def sort_words(w):
+#   print(sorted(l.upper() for l in w.split(',')))
+
+# sort_words(input('Enter comma-separated words:'))
+
+"""
+9. Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+
+Suppose the following input is supplied to the program:
+
+Hello world
+Practice makes perfect
+
+Then, the output should be:
+
+HELLO WORLD
+PRACTICE MAKES PERFECT
+"""
+
+# out = ""
+
+# def capSeq(x):
+#   global out
+#   if x != "":
+#     out = out + x.upper() + "\n"
+#     return capSeq(input("ENTER. CARR. RETURN TO PRINT:"))
+#   else:
+#     return print(out)
+
+# capSeq(input("ENTER. CARR. RETURN TO PRINT:"))
+
+'''Soltuion by: hajimalung baba
+'''
+def inputs():
+    while True:
+        string = input()
+        if not string:
+            return
+        yield string
+
+print(*(line.upper() for line in inputs()),sep='\n')
   
   
   
