@@ -152,17 +152,32 @@ PRACTICE MAKES PERFECT
 
 # capSeq(input("ENTER. CARR. RETURN TO PRINT:"))
 
-'''Soltuion by: hajimalung baba
-'''
-def inputs():
-    while True:
-        string = input()
-        if not string:
-            return
-        yield string
+# '''Soltuion by: hajimalung baba
+# '''
+# def inputs():
+#     while True:
+#         string = input()
+#         if not string:
+#             return
+#         yield string
 
-print(*(line.upper() for line in inputs()),sep='\n')
-  
+# print(*(line.upper() for line in inputs()),sep='\n')
+
+"""
+10 Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+
+Suppose the following input is supplied to the program:
+
+hello world and practice makes perfect and hello world again
+Then, the output should be:
+
+again and hello makes perfect practice world.
+"""
+
+def my_func(x):
+  return print(' '.join(sorted((v for v in {w.lower() for w in x.split()}))))
+
+my_func(input("ENTER: "))
   
   
   
