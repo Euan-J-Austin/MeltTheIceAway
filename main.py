@@ -174,12 +174,28 @@ Then, the output should be:
 again and hello makes perfect practice world.
 """
 
-def my_func(x):
-  return print(' '.join(sorted((v for v in {w.lower() for w in x.split()}))))
+# def my_func(x):
+#   return print(' '.join(sorted((v for v in {w.lower() for w in x.split()}))))
 
-my_func(input("ENTER: "))
-  
-  
+# my_func(input("ENTER: "))
+
+"""
+11. Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+
+Example:
+
+0100,0011,1010,1001
+Then the output should be:
+
+1010
+Notes: Assume the data is input by console.
+"""
+
+def bin_five(s):
+  return print(','.join([bin(x)[2:] for x in (filter(lambda x: x%5 == 0, [int(x, 2) for x in s.split(',')]))]))
+
+bin_five(input("ENTER:"))
+
   
   
     
