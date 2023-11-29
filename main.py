@@ -191,11 +191,35 @@ Then the output should be:
 Notes: Assume the data is input by console.
 """
 
-def bin_five(s):
-  return print(','.join([bin(x)[2:] for x in (filter(lambda x: x%5 == 0, [int(x, 2) for x in s.split(',')]))]))
+# def bin_five(s):
+#   return print(','.join([bin(x)[2:] for x in (filter(lambda x: x%5 == 0, [int(x, 2) for x in s.split(',')]))]))
 
-bin_five(input("ENTER:"))
+# bin_five(input("ENTER:"))
 
+"""
+12.Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.The numbers obtained should be printed in a comma-separated sequence on a single line.
+"""
+
+x = range(1000, 3001)
+out = []
+
+for n in x:
+  length_n = len(str(n))
+  score = 0
+  for v in str(n):
+    if int(v)%2 == 0:
+      score += 1
+    else:
+      pass
+  if score == length_n:
+    out.append(n)
+  else: 
+    pass
+
+print(out)
+  
+    
+    
   
   
     
