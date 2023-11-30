@@ -200,25 +200,48 @@ Notes: Assume the data is input by console.
 12.Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.The numbers obtained should be printed in a comma-separated sequence on a single line.
 """
 
-x = range(1000, 3001)
-out = []
+# x = range(1000, 3001)
+# out = []
 
-for n in x:
-  length_n = len(str(n))
-  score = 0
-  for v in str(n):
-    if int(v)%2 == 0:
-      score += 1
-    else:
-      pass
-  if score == length_n:
-    out.append(n)
-  else: 
-    pass
+# for n in x:
+#   length_n = len(str(n))
+#   score = 0
+#   for v in str(n):
+#     if int(v)%2 == 0:
+#       score += 1
+#     else:
+#       pass
+#   if score == length_n:
+#     out.append(n)
+#   else: 
+#     pass
 
-print(out)
-  
-    
+# print(out)
+
+"""
+13. Write a program that accepts a sentence and calculate the number of letters and digits.
+
+Suppose the following input is supplied to the program:
+
+hello world! 123
+Then, the output should be:
+
+LETTERS 10
+DIGITS 3
+"""
+
+
+def count_ld(x):
+  return print(f'LETTERS {len([v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)])}\nDIGIT {len([v for v in x if ord(v) in range(48,54)])}')
+
+count_ld(input("ENTER: "))
+
+"""
+
+I'm happy with this solution, used unicode integer values to isolate all letters, lower and upper case, in the Latin alphabet and the digits 0-9 which saved on detailed solution to distinguishing between numbers in string format and integers; how to deal with punctuation 
+
+"""
+
     
   
   
