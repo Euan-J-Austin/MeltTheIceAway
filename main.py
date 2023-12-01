@@ -231,16 +231,37 @@ DIGITS 3
 """
 
 
-def count_ld(x):
-  return print(f'LETTERS {len([v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)])}\nDIGIT {len([v for v in x if ord(v) in range(48,54)])}')
+# def count_ld(x):
+#   return print(f'LETTERS {len([v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)])}\nDIGIT {len([v for v in x if ord(v) in range(48,58)])}')
 
-count_ld(input("ENTER: "))
+# count_ld(input("ENTER: "))
 
 """
 
 I'm happy with this solution, used unicode integer values to isolate all letters, lower and upper case, in the Latin alphabet and the digits 0-9 which saved on detailed solution to distinguishing between numbers in string format and integers; how to deal with punctuation 
 
 """
+
+"""
+14 Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+Suppose the following input is supplied to the program:
+
+Hello world!
+Then, the output should be:
+
+UPPER CASE 1
+LOWER CASE 9
+
+"""
+
+def what_case(x):
+  chars = [v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)]
+  upper = len([i for i in chars if i.isupper()])
+  lower = len(chars) - upper
+  return print(f'UPPER CASE {upper}\nLOWER CASE {lower}')
+
+what_case(input("ENTER:"))
 
     
   
