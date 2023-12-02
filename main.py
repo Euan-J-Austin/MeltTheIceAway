@@ -255,15 +255,27 @@ LOWER CASE 9
 
 """
 
-def what_case(x):
-  chars = [v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)]
-  upper = len([i for i in chars if i.isupper()])
-  lower = len(chars) - upper
-  return print(f'UPPER CASE {upper}\nLOWER CASE {lower}')
+# def what_case(x):
+#   chars = [v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)]
+#   upper = len([i for i in chars if i.isupper()])
+#   lower = len(chars) - upper
+#   return print(f'UPPER CASE {upper}\nLOWER CASE {lower}')
 
-what_case(input("ENTER:"))
+# what_case(input("ENTER:"))
 
-    
-  
-  
+"""
+15. Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+
+Suppose the following input is supplied to the program:
+
+9
+Then, the output should be:
+
+11106
+"""
+
+def adder(a):
+  return print(sum(int(a*i) for i in range(1,5)))
+
+adder('9')
     
