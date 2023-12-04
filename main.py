@@ -288,8 +288,42 @@ Then, the output should be:
 1,9,25,49,81
 """
 
-l = [1,2,3,4,5,6,7,8,9]
+# l = [1,2,3,4,5,6,7,8,9]
 
-out = [x*x for x in l if x%2 != 0]
+# out = [x*x for x in l if x%2 != 0]
 
-print(out)
+# print(out)
+
+"""
+17
+
+Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
+
+D 100
+W 200
+D means deposit while W means withdrawal.
+Suppose the following input is supplied to the program:
+
+D 300
+D 300
+W 200
+D 100
+Then, the output should be:
+
+500
+"""
+
+def inputs():
+    while True:
+        string = input()
+        if not string:
+            break
+        yield string
+
+def total(x):
+  return print(sum([int(i[1:]) if i[0] == 'D' else -int(i[1:]) for i in x]))
+  
+total([line for line in inputs()])
+
+
+
