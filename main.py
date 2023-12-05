@@ -313,17 +313,71 @@ Then, the output should be:
 500
 """
 
-def inputs():
-    while True:
-        string = input()
-        if not string:
-            break
-        yield string
+# def inputs():
+#     while True:
+#         string = input()
+#         if not string:
+#             break
+#         yield string
 
-def total(x):
-  return print(sum([int(i[1:]) if i[0] == 'D' else -int(i[1:]) for i in x]))
+
+# print('£', sum([int(i[1:]) if i[0] == 'D' else -int(i[1:]) for i in [line for line in inputs()]]))
+
+"""
+18
+
+Question:
+A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+
+Following are the criteria for checking the password:
+
+At least 1 letter between [a-z]
+At least 1 number between [0-9]
+At least 1 letter between [A-Z]
+At least 1 character from [$#@]
+Minimum length of transaction password: 6
+Maximum length of transaction password: 12
+Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
+
+Example
+
+If the following passwords are given as input to the program:
+
+ABd1234@1,a F1#,2w3E*,2We3345
+Then, the output of the program should be:
+
+ABd1234@1
+
+"""
+
+passwords = ['ABd1234@1','a F1#','2w3E*','2We3345']
+
+def checker(password):
   
-total([line for line in inputs()])
+  counter = set({})
+  out = []
+  
+  if len(password) in range(6,13):
+    for p in password:
+      for w in p:
+        if ord(w) in range(48,58):
+          counter.add('number')
+        if ord(w) in range(65,91):
+          counter.add('upper')
+          pass
+        if ord(w) in range(97,123):
+          counter.add('lower')
+          pass
+        if ord(w) in range(35,37) or ord(w) == 64:
+          counter.add('special')
+          
+  if len(counter) == 4:
+      out.append(password)
+    
+  return out
+
+print(list(filter(checker, passwords)))
+
 
 
 
