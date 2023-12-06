@@ -350,34 +350,63 @@ ABd1234@1
 
 """
 
-passwords = ['ABd1234@1','a F1#','2w3E*','2We3345']
+# passwords = ['ABd1234@1','a F1#','2w3E*','2We3345']
 
-def checker(password):
+# def checker(password):
   
-  counter = set({})
-  out = []
+#   counter = set({})
+#   out = []
   
-  if len(password) in range(6,13):
-    for p in password:
-      for w in p:
-        if ord(w) in range(48,58):
-          counter.add('number')
-        if ord(w) in range(65,91):
-          counter.add('upper')
-          pass
-        if ord(w) in range(97,123):
-          counter.add('lower')
-          pass
-        if ord(w) in range(35,37) or ord(w) == 64:
-          counter.add('special')
+#   if len(password) in range(6,13):
+#     for p in password:
+#       for w in p:
+#         if ord(w) in range(48,58):
+#           counter.add('number')
+#         if ord(w) in range(65,91):
+#           counter.add('upper')
+#           pass
+#         if ord(w) in range(97,123):
+#           counter.add('lower')
+#           pass
+#         if ord(w) in range(35,37) or ord(w) == 64:
+#           counter.add('special')
           
-  if len(counter) == 4:
-      out.append(password)
+#   if len(counter) == 4:
+#       out.append(password)
     
-  return out
+#   return out
 
-print(list(filter(checker, passwords)))
-
-
+# print(list(filter(checker, passwords)))
 
 
+
+"""
+19
+You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
+
+1: Sort based on name
+2: Then sort based on age
+3: Then sort by score
+The priority is that name > age > score.
+
+If the following tuples are given as input to the program:
+
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+Then, the output of the program should be:
+
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
+"""
+
+def inputs():
+    while True:
+        string = input()
+        if not string:
+            break
+        yield string
+
+print([tuple(str(x).capitalize().split(',')) for x in sorted([line.upper() for line in inputs()])])
