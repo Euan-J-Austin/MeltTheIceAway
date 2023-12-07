@@ -402,11 +402,45 @@ Then, the output of the program should be:
 
 """
 
-def inputs():
-    while True:
-        string = input()
-        if not string:
-            break
-        yield string
+# def inputs():
+#     while True:
+#         string = input()
+#         if not string:
+#             break
+#         yield string
 
-print([tuple(str(x).capitalize().split(',')) for x in sorted([line.upper() for line in inputs()])])
+# print([tuple(str(x).capitalize().split(',')) for x in sorted([line.upper() for line in inputs()])])
+
+"""
+20. Question:
+Define a class with a generator which can iterate the numbers, which are divisible by 7, between a given range 0 and n.
+
+Suppose the following input is supplied to the program:
+
+7
+Then, the output should be:
+
+0
+7
+14
+Hints:
+Consider use class, function and comprehension.
+"""
+
+class luckySeven():
+  def __init__(self, limit):
+    self.limit = limit
+  def generator(self):
+    for y in (x for x in range(0,self.limit+1) if x%7 == 0):
+      print(y)
+    
+                              
+
+
+test = luckySeven(21).generator()
+
+test
+
+
+    
+    
