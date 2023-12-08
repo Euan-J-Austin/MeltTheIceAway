@@ -427,20 +427,49 @@ Hints:
 Consider use class, function and comprehension.
 """
 
-class luckySeven():
-  def __init__(self, limit):
-    self.limit = limit
-  def generator(self):
-    for y in (x for x in range(0,self.limit+1) if x%7 == 0):
-      print(y)
+# class luckySeven():
+#   def __init__(self, limit):
+#     self.limit = limit
+#   def generator(self):
+#     for y in (x for x in range(0,self.limit+1) if x%7 == 0):
+#       print(y)
     
                               
+# luckySeven(int(input("Enter limit:"))).generator()
 
+"""
+Question 21
+Question:
+A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
 
-test = luckySeven(21).generator()
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print the nearest integer. Example: If the following tuples are given as input to the program:
 
-test
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+Then, the output of the program should be:
 
+2
+"""
+import math as m
 
-    
-    
+def inputs():
+    while True:
+        string = input()
+        if not string:
+            break
+        yield string
+
+print("EXAMPLE INPUT:\nUP 5\nDOWN 3\nRIGHT 2\nLEFT 3\n")
+
+d = [int(y[1])for y in [x.split(' ') for x in inputs()]]
+
+distance = m.sqrt((d[0] - d[1])**2 + (d[2] - d[3])**2)
+
+print(distance)
+
