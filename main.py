@@ -456,20 +456,49 @@ Then, the output of the program should be:
 
 2
 """
-import math as m
+# import math as m
 
-def inputs():
-    while True:
-        string = input()
-        if not string:
-            break
-        yield string
+# def inputs():
+#     while True:
+#         string = input()
+#         if not string:
+#             break
+#         yield string
 
-print("EXAMPLE INPUT:\nUP 5\nDOWN 3\nRIGHT 2\nLEFT 3\n")
+# print("EXAMPLE INPUT:\nUP 5\nDOWN 3\nRIGHT 2\nLEFT 3\n")
 
-d = [int(y[1])for y in [x.split(' ') for x in inputs()]]
+# d = [int(y[1]) for y in [x.split(' ') for x in inputs()]]
 
-distance = m.sqrt((d[0] - d[1])**2 + (d[2] - d[3])**2)
+# distance = m.sqrt((d[0] - d[1])**2 + (d[2] - d[3])**2)
 
-print(distance)
+# print(round(distance))
 
+"""
+QUESTION 22
+
+Question:
+Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically.
+
+Suppose the following input is supplied to the program:
+
+New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+
+Then, the output should be:
+
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1
+
+"""
+
+input = "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
+
+print({x: input.count(x) for x in sorted(input.split(' '))})
