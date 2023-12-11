@@ -31,19 +31,17 @@
 #yurbika's solution corrected by Developer-47
 # num = int(input("Number: "))
 # print(dict(enumerate([i*i for i in range(1, num+1)], 1)))
-
 """4. Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.Suppose the following input is supplied to the program:"""
 
 #out=[]
 
 #for v in input('IN: '):
-  #if v == ',':
-    #continue
-  #else:
-    #out.append(v)
-    
-#print(out, tuple(out))
+#if v == ',':
+#continue
+#else:
+#out.append(v)
 
+#print(out, tuple(out))
 """5. Define a class which has at least two methods:
 getString: to get a string from console input
 printString: to print the string in upper case.
@@ -56,10 +54,9 @@ Also please include simple test function to test the class methods."""
 #   def printString():
 #     out = Capitalise.getString()
 #     return print(str(out).upper())
-  
+
 # x = Capitalise
 # x.printString()
-
 """
 6. Write a program that calculates and prints the value according to the given formula:
 
@@ -78,7 +75,6 @@ D is the variable whose values should be input to your program in a comma-separa
 #       print(m.sqrt(2*50*int(v)/30))
 
 # calculator(input('ENTER A LIST OF COMMA-SEPARATED VALUES:'))
-
 """
 7. _Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i _ j.*
 
@@ -115,7 +111,6 @@ Then, the output of the program should be:
 # x,y = map(int,input().split(','))
 # lst = [[i*j for j in range(y)] for i in range(x)]
 # print(lst)
-
 """
 8  Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
 
@@ -125,7 +120,6 @@ Then, the output of the program should be:
 #   print(sorted(l.upper() for l in w.split(',')))
 
 # sort_words(input('Enter comma-separated words:'))
-
 """
 9. Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 
@@ -162,7 +156,6 @@ PRACTICE MAKES PERFECT
 #         yield string
 
 # print(*(line.upper() for line in inputs()),sep='\n')
-
 """
 10 Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
 
@@ -178,7 +171,6 @@ again and hello makes perfect practice world.
 #   return print(' '.join(sorted((v for v in {w.lower() for w in x.split()}))))
 
 # my_func(input("ENTER: "))
-
 """
 11. Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
 
@@ -195,7 +187,6 @@ Notes: Assume the data is input by console.
 #   return print(','.join([bin(x)[2:] for x in (filter(lambda x: x%5 == 0, [int(x, 2) for x in s.split(',')]))]))
 
 # bin_five(input("ENTER:"))
-
 """
 12.Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.The numbers obtained should be printed in a comma-separated sequence on a single line.
 """
@@ -213,11 +204,10 @@ Notes: Assume the data is input by console.
 #       pass
 #   if score == length_n:
 #     out.append(n)
-#   else: 
+#   else:
 #     pass
 
 # print(out)
-
 """
 13. Write a program that accepts a sentence and calculate the number of letters and digits.
 
@@ -230,18 +220,15 @@ LETTERS 10
 DIGITS 3
 """
 
-
 # def count_ld(x):
 #   return print(f'LETTERS {len([v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)])}\nDIGIT {len([v for v in x if ord(v) in range(48,58)])}')
 
 # count_ld(input("ENTER: "))
-
 """
 
 I'm happy with this solution, used unicode integer values to isolate all letters, lower and upper case, in the Latin alphabet and the digits 0-9 which saved on detailed solution to distinguishing between numbers in string format and integers; how to deal with punctuation 
 
 """
-
 """
 14 Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
 
@@ -262,7 +249,6 @@ LOWER CASE 9
 #   return print(f'UPPER CASE {upper}\nLOWER CASE {lower}')
 
 # what_case(input("ENTER:"))
-
 """
 15. Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
 
@@ -278,7 +264,6 @@ Then, the output should be:
 #   return print(sum(int(a*i) for i in range(1,5)))
 
 # adder('9')
-
 """
 16 Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers. >Suppose the following input is supplied to the program:
 
@@ -293,7 +278,6 @@ Then, the output should be:
 # out = [x*x for x in l if x%2 != 0]
 
 # print(out)
-
 """
 17
 
@@ -320,9 +304,7 @@ Then, the output should be:
 #             break
 #         yield string
 
-
 # print('£', sum([int(i[1:]) if i[0] == 'D' else -int(i[1:]) for i in [line for line in inputs()]]))
-
 """
 18
 
@@ -353,10 +335,10 @@ ABd1234@1
 # passwords = ['ABd1234@1','a F1#','2w3E*','2We3345']
 
 # def checker(password):
-  
+
 #   counter = set({})
 #   out = []
-  
+
 #   if len(password) in range(6,13):
 #     for p in password:
 #       for w in p:
@@ -370,16 +352,13 @@ ABd1234@1
 #           pass
 #         if ord(w) in range(35,37) or ord(w) == 64:
 #           counter.add('special')
-          
+
 #   if len(counter) == 4:
 #       out.append(password)
-    
+
 #   return out
 
 # print(list(filter(checker, passwords)))
-
-
-
 """
 19
 You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
@@ -410,7 +389,6 @@ Then, the output of the program should be:
 #         yield string
 
 # print([tuple(str(x).capitalize().split(',')) for x in sorted([line.upper() for line in inputs()])])
-
 """
 20. Question:
 Define a class with a generator which can iterate the numbers, which are divisible by 7, between a given range 0 and n.
@@ -433,10 +411,8 @@ Consider use class, function and comprehension.
 #   def generator(self):
 #     for y in (x for x in range(0,self.limit+1) if x%7 == 0):
 #       print(y)
-    
-                              
-# luckySeven(int(input("Enter limit:"))).generator()
 
+# luckySeven(int(input("Enter limit:"))).generator()
 """
 Question 21
 Question:
@@ -472,7 +448,6 @@ Then, the output of the program should be:
 # distance = m.sqrt((d[0] - d[1])**2 + (d[2] - d[3])**2)
 
 # print(round(distance))
-
 """
 QUESTION 22
 
@@ -502,7 +477,6 @@ to:1
 # input = "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
 
 # print({x: input.count(x) for x in sorted(input.split(' '))})
-
 """
 23
 
@@ -519,7 +493,6 @@ Write a method which can calculate square value of number
 
 # m = Calculator
 # m.print_squared()
-
 """
 24
 
@@ -530,11 +503,56 @@ Please write a program to print some Python built-in functions documents, such a
 And add document for your own function
 """
 
-def doc_printer():
-  """Prints __doc__ information"""
-  print(abs.__doc__)
-  print(int.__doc__)
-  print(doc_printer.__doc__)
-  
 
-doc_printer()
+# def doc_printer():
+#   """Prints __doc__ information"""
+#   print(abs.__doc__)
+#   print(int.__doc__)
+#   print(doc_printer.__doc__)
+
+
+# doc_printer()
+
+
+"""
+25
+
+Question:
+Define a class, which have a class parameter and have a same instance paramete
+
+"""
+# import math as m
+
+# class Triangle:
+#   def __init__(self, opposite, adjacent):
+#     self.opposite = opposite
+#     self.adjacent = adjacent
+#   def hypotenuse(self):
+#     return print(round(m.sqrt(self.opposite**2 + self.adjacent**2), 2))
+
+# t1 = Triangle(5,7)
+
+# t1.hypotenuse()
+
+
+"""
+26
+
+Function to sum two numbers
+"""
+
+# def sumOf(a,b):
+#   return print(int(a)+int(b))
+
+# sumOf(1,2)
+
+"""
+27
+
+Function to convert int to str
+"""
+
+# def toString(a):
+#   return print(str(a))
+
+# toString(12345)
