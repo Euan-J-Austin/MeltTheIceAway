@@ -556,3 +556,48 @@ Function to convert int to str
 #   return print(str(a))
 
 # toString(12345)
+
+"""
+28
+
+Define a function that can receive two integer numbers in string form and compute their sum and then print it in console.
+"""
+
+# def printSum(a,b):
+#   return print(int(a)+int(b))
+
+# printSum(input("Enter A:"), input("Enter B:"))
+
+"""
+29
+
+Define a function that can accept two strings as input and concatenate them and then print it in console.
+
+"""
+
+# def concatStrings(a,b):
+#   return print(a+b)
+
+# concatStrings(input("A:"),input("B:"))
+
+"""
+30
+
+Define a function that can accept two strings as input and print the string with maximum length in console. If two strings have the same length, then the function should print all strings line by line.
+
+"""
+
+# def printLongest(a, b):
+#   if len(a) == len(b):
+#     print(f"{a}\n{b}")
+#   elif len(a) > len(b):
+#     print(a)
+#   else:
+#     print(b)
+
+# printLongest(input(""),input(""))
+
+
+#yuan1z solution ...func = lambda a,b: print(max((a,b),key=len)) if len(a)!=len(b) else print(a+'\n'+b)
+
+  
