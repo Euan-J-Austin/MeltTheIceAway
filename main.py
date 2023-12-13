@@ -600,4 +600,73 @@ Define a function that can accept two strings as input and print the string with
 
 #yuan1z solution ...func = lambda a,b: print(max((a,b),key=len)) if len(a)!=len(b) else print(a+'\n'+b)
 
-  
+"""
+31
+
+Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
+
+
+"""
+
+
+# def squaredDictionary():
+#   return print({x: x**2 for x in range(1,21)})
+
+# squaredDictionary()
+
+"""
+32
+
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the keys only.
+"""
+
+# def squaredDictKeys():
+#   return print({x: x**2 for x in range(1,21)}.keys())
+
+# squaredDictKeys()
+
+"""
+33 
+
+Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
+
+"""
+
+# print([x**2 for x in range(1,21)])
+
+"""
+34
+
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the first 5 elements in the list.
+
+"""
+
+# print([x**2 for x in range(1,21)][:5])
+
+"""
+34
+
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the last 5 elements in the list.
+
+"""
+
+# print([x**2 for x in range(1,21)][-5:])
+
+"""
+35
+
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print all values except the first 5 elements in the list.
+
+
+"""
+
+# print([x**2 for x in range(1,21)][5:])
+
+"""
+37
+
+Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included).
+
+"""
+
+# print(tuple([x**2 for x in range(1,21)]))
