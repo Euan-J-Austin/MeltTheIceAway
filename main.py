@@ -670,3 +670,61 @@ Define a function which can generate and print a tuple where the value are squar
 """
 
 # print(tuple([x**2 for x in range(1,21)]))
+
+"""
+38
+
+With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line.
+"""
+
+# t = tuple([x for x in range (1,11)])
+
+# print(f'{t[:5]}\n{t[5:]}')
+
+"""
+39
+
+Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
+
+"""
+
+# t = tuple([x for x in range (1,11)])
+
+# print(tuple([x for x in t if x%2 == 0]))
+
+"""
+40
+
+Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No".
+
+"""
+
+# print("".join((['Yes' if input('ENTER:').lower() == 'yes' else 'No'])))
+
+"""
+41
+
+Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].
+"""
+
+# o = list(map(lambda x: x**2, [x for x  in range(1,11)]))
+
+# print(o)
+
+"""
+42 
+
+Write a program which can map() and filter() to make a list whose elements are square of even number in [1,2,3,4,5,6,7,8,9,10].
+"""
+
+# o = list(map(lambda x: x**2, filter(lambda x: x%2 == 0, [x for x in range(1,11)])))
+
+# print(o)
+
+"""
+43
+
+Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+"""
+
+# print(list(filter(lambda x: x%2 == 0, [x for x in range(1,21)])))
