@@ -728,3 +728,34 @@ Write a program which can filter() to make a list whose elements are even number
 """
 
 # print(list(filter(lambda x: x%2 == 0, [x for x in range(1,21)])))
+
+"""
+44
+
+Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).
+"""
+
+# print(list(map(lambda x: x**2, [x for x in range(1,21)])))
+
+"""
+45
+
+Define a class named American which has a static method called printNationality.
+
+46
+
+Define a class named American and its subclass NewYorker.
+
+"""
+
+# class American:
+#   @staticmethod
+#   def printNationality():
+#     print("I'm American.")
+# class newYorker(American):
+#   def __init__(self, printNationality):
+#       super().__init__()
+
+
+# newYorker.printNationality()
+    
