@@ -801,19 +801,25 @@ Define a class named Shape and its subclass Square. The Square class has an init
 
 """
 
-class Shape:
-  def __init__(self, length):
-    self.l = length
-  def area(self):
-    return print(self.l*self.l)
-
-class Square(Shape):
-  def __init__(self, area):
-    super().__init__()
+# class Shape:
+#   def __init__(self):
+#     pass
+#   def area(self):
+#     return print(0)
     
+# class Square(Shape):
+#   def __init__(self, length = 0):
+#       Shape.__init__(self)
+#       self.l =length
+#   def area(self):
+#     return print(self.l*self.l)
+    
+# Square(9).area()
 
+"""
+50 Please raise a RuntimeError exception.
+"""
+# x = 1
 
-Shape(6)
-Square.area()
-  
-  
+# if x > 0:
+#   raise Exception("Error.")
