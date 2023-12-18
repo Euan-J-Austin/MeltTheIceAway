@@ -503,17 +503,13 @@ Please write a program to print some Python built-in functions documents, such a
 And add document for your own function
 """
 
-
 # def doc_printer():
 #   """Prints __doc__ information"""
 #   print(abs.__doc__)
 #   print(int.__doc__)
 #   print(doc_printer.__doc__)
 
-
 # doc_printer()
-
-
 """
 25
 
@@ -533,8 +529,6 @@ Define a class, which have a class parameter and have a same instance paramete
 # t1 = Triangle(5,7)
 
 # t1.hypotenuse()
-
-
 """
 26
 
@@ -545,7 +539,6 @@ Function to sum two numbers
 #   return print(int(a)+int(b))
 
 # sumOf(1,2)
-
 """
 27
 
@@ -556,7 +549,6 @@ Function to convert int to str
 #   return print(str(a))
 
 # toString(12345)
-
 """
 28
 
@@ -567,7 +559,6 @@ Define a function that can receive two integer numbers in string form and comput
 #   return print(int(a)+int(b))
 
 # printSum(input("Enter A:"), input("Enter B:"))
-
 """
 29
 
@@ -579,7 +570,6 @@ Define a function that can accept two strings as input and concatenate them and 
 #   return print(a+b)
 
 # concatStrings(input("A:"),input("B:"))
-
 """
 30
 
@@ -597,9 +587,7 @@ Define a function that can accept two strings as input and print the string with
 
 # printLongest(input(""),input(""))
 
-
 #yuan1z solution ...func = lambda a,b: print(max((a,b),key=len)) if len(a)!=len(b) else print(a+'\n'+b)
-
 """
 31
 
@@ -608,12 +596,10 @@ Define a function which can print a dictionary where the keys are numbers betwee
 
 """
 
-
 # def squaredDictionary():
 #   return print({x: x**2 for x in range(1,21)})
 
 # squaredDictionary()
-
 """
 32
 
@@ -624,7 +610,6 @@ Define a function which can generate a dictionary where the keys are numbers bet
 #   return print({x: x**2 for x in range(1,21)}.keys())
 
 # squaredDictKeys()
-
 """
 33 
 
@@ -633,7 +618,6 @@ Define a function which can generate and print a list where the values are squar
 """
 
 # print([x**2 for x in range(1,21)])
-
 """
 34
 
@@ -642,7 +626,6 @@ Define a function which can generate a list where the values are square of numbe
 """
 
 # print([x**2 for x in range(1,21)][:5])
-
 """
 34
 
@@ -651,7 +634,6 @@ Define a function which can generate a list where the values are square of numbe
 """
 
 # print([x**2 for x in range(1,21)][-5:])
-
 """
 35
 
@@ -661,7 +643,6 @@ Define a function which can generate a list where the values are square of numbe
 """
 
 # print([x**2 for x in range(1,21)][5:])
-
 """
 37
 
@@ -670,7 +651,6 @@ Define a function which can generate and print a tuple where the value are squar
 """
 
 # print(tuple([x**2 for x in range(1,21)]))
-
 """
 38
 
@@ -680,7 +660,6 @@ With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first ha
 # t = tuple([x for x in range (1,11)])
 
 # print(f'{t[:5]}\n{t[5:]}')
-
 """
 39
 
@@ -691,16 +670,13 @@ Write a program to generate and print another tuple whose values are even number
 # t = tuple([x for x in range (1,11)])
 
 # print(tuple([x for x in t if x%2 == 0]))
-
 """
 40
 
 Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No".
-
 """
 
 # print("".join((['Yes' if input('ENTER:').lower() == 'yes' else 'No'])))
-
 """
 41
 
@@ -710,7 +686,6 @@ Write a program which can map() to make a list whose elements are square of elem
 # o = list(map(lambda x: x**2, [x for x  in range(1,11)]))
 
 # print(o)
-
 """
 42 
 
@@ -720,7 +695,6 @@ Write a program which can map() and filter() to make a list whose elements are s
 # o = list(map(lambda x: x**2, filter(lambda x: x%2 == 0, [x for x in range(1,11)])))
 
 # print(o)
-
 """
 43
 
@@ -728,7 +702,6 @@ Write a program which can filter() to make a list whose elements are even number
 """
 
 # print(list(filter(lambda x: x%2 == 0, [x for x in range(1,21)])))
-
 """
 44
 
@@ -736,7 +709,6 @@ Write a program which can map() to make a list whose elements are square of numb
 """
 
 # print(list(map(lambda x: x**2, [x for x in range(1,21)])))
-
 """
 45
 
@@ -756,9 +728,7 @@ Define a class named American and its subclass NewYorker.
 #   def __init__(self, printNationality):
 #       super().__init__()
 
-
 # newYorker.printNationality()
-
 """
 47
 
@@ -775,7 +745,6 @@ Define a class named Circle which can be constructed by a radius. The Circle cla
 #     return print(round(math.pi * self.radius**2, 2))
 
 # Circle(input("Radius: ")).area()
-
 """
 48 
 
@@ -783,7 +752,6 @@ Define a class named Circle which can be constructed by a radius. The Circle cla
 Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area.
 
 """
-
 
 # class Rectangle:
 #   def __init__(self, l, w):
@@ -793,7 +761,6 @@ Define a class named Rectangle which can be constructed by a length and width. T
 #     return print(self.length*self.width)
 
 # Rectangle(10,12).area()
-
 """
 49
 
@@ -806,16 +773,15 @@ Define a class named Shape and its subclass Square. The Square class has an init
 #     pass
 #   def area(self):
 #     return print(0)
-    
+
 # class Square(Shape):
 #   def __init__(self, length = 0):
 #       Shape.__init__(self)
 #       self.l =length
 #   def area(self):
 #     return print(self.l*self.l)
-    
-# Square(9).area()
 
+# Square(9).area()
 """
 50 Please raise a RuntimeError exception.
 """
@@ -823,3 +789,54 @@ Define a class named Shape and its subclass Square. The Square class has an init
 
 # if x > 0:
 #   raise Exception("Error.")
+"""51
+
+Write a function to compute 5/0 and use try/except to catch the exceptions."""
+
+# def overZero():
+#   return print(5/0)
+
+# try:
+#   overZero()
+# except:
+#    print("Zero-division error.")
+"""
+Question 52
+
+Define a custom exception class which takes a string message as attribute.
+
+To define a custom exception, we need to define a class inherited from Exception.
+"""
+
+
+class OverZero(Exception):
+  """
+  Custom exception class.
+
+  Returns error message if input greater than zero.
+  """
+
+
+#   def __init__(self, msg):
+#     self.msg = msg
+#   def message(self):
+#     print(self.msg)
+
+# x = int(input())
+
+# if x > 0:
+#   OverZero("Greater than zero. Too large!").message()
+# if x <= 0:
+#   OverZero("OK").message()
+
+# help(OverZero)
+"""
+53
+
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+
+"""
+
+e = "publiuscurtius@senate.im"
+
+print(e.split('@')[0])
