@@ -809,12 +809,12 @@ To define a custom exception, we need to define a class inherited from Exception
 """
 
 
-class OverZero(Exception):
-  """
-  Custom exception class.
+# class OverZero(Exception):
+  # """
+  # Custom exception class.
 
-  Returns error message if input greater than zero.
-  """
+  # Returns error message if input greater than zero.
+  # """
 
 
 #   def __init__(self, msg):
@@ -830,6 +830,7 @@ class OverZero(Exception):
 #   OverZero("OK").message()
 
 # help(OverZero)
+
 """
 53
 
@@ -837,6 +838,66 @@ Assuming that we have some email addresses in the "username@companyname.com" for
 
 """
 
-e = "publiuscurtius@senate.im"
+# e = "publiuscurtius@senate.im"
 
-print(e.split('@')[0])
+# print(e.split('@')[0])
+
+"""
+54
+
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
+
+"""
+
+# x = "username@companyname.com"
+
+# print(x.split('@')[1].split('.')[0])
+
+"""
+55
+
+Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of digits only.
+"""
+
+# x = "2 cats and 3 dogs".split(' ')
+
+# print([v for v in x if v.isdigit()])
+
+"""
+56
+
+Print a unicode string "hello world".
+
+"""
+
+# print(u"Hello world")
+
+"""
+57
+
+Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
+"""
+
+# print(input().encode('utf-8'))
+
+"""
+58
+
+Write a special comment to indicate a Python source code file is in unicode.
+
+
+"""
+
+#-*- encoding: utf-8 -*-
+
+"""
+59
+
+Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).
+"""
+
+import numpy as np
+
+i = float(input())
+
+print(round(sum([x/float(x+1) for x in np.arange(1,i+1,1)]),2))
