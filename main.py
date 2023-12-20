@@ -894,10 +894,92 @@ Write a special comment to indicate a Python source code file is in unicode.
 59
 
 Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).
+
 """
 
-import numpy as np
+# import numpy as np
 
-i = float(input())
+# def calculator(i):
+#   if i > 0:
+#     return print(round(sum([x/float(x+1) for x in np.arange(1,i+1,1)]),2))
+#   else:
+#     calculator(float(input("Enter integer greater than zero: ")))
+    
+  
 
-print(round(sum([x/float(x+1) for x in np.arange(1,i+1,1)]),2))
+# calculator(float(input("Enter integer greater than zero: ")))
+
+
+
+"""
+60
+
+Write a program to compute:
+
+f(n)=f(n-1)+100 when n>0
+and f(0)=0
+with a given n input by console (n>0).
+
+"""
+
+# def f(n):
+#   if n == 0:
+#     return 0
+#   return f(n-1)+100
+
+# print(f(int(input())))
+
+"""
+61
+
+The Fibonacci Sequence is computed based on the following formula:
+
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program to compute the value of f(n) with a given n input by console.
+"""
+
+# def f(n):
+#   if n == 0:
+#     return 0
+#   if n == 1:
+#     return 1
+#   return f(n-1)+f(n-2) 
+
+# print('Fibonacci sequence sums the two preceeding numbers usig the formula f(n-1)+f(n-2). For example, input of 7 returns 13 which is the sum of 5 (F(6)) and 3(F(5)).')
+
+# print(f(int(input(""))))
+
+"""
+Question 62
+
+The Fibonacci Sequence is computed based on the following formula:
+
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program to compute the value of f(n) with a given n input by console.
+
+Example: If the following n is given as input to the program:
+
+7
+Then, the output of the program should be:
+
+0,1,1,2,3,5,8,13
+
+"""
+
+def f(n):
+  out = []
+  if n == 0:
+    return 0
+  if n == 1:
+    return 1
+  out.append(f(n-1)+f(n-2))
+  print(out)
+  return f(n-1)+f(n-2)
+
+print('Fibonacci sequence sums the two preceeding numbers usig the formula f(n-1)+f(n-2). For example, input of 7 returns 13 which is the sum of 5 (F(6)) and 3(F(5)).')
+
+print(f(int(input(""))))
