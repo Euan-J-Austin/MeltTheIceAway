@@ -970,16 +970,30 @@ Then, the output of the program should be:
 
 """
 
-def f(n):
-  out = []
-  if n == 0:
-    return 0
-  if n == 1:
-    return 1
-  out.append(f(n-1)+f(n-2))
-  print(out)
-  return f(n-1)+f(n-2)
+# out = []
 
-print('Fibonacci sequence sums the two preceeding numbers usig the formula f(n-1)+f(n-2). For example, input of 7 returns 13 which is the sum of 5 (F(6)) and 3(F(5)).')
+# for f in [n for n in range(0,int(input())+1)]:
+#   if f == 0:
+#     out.append(0)
+#   elif f == 1:
+#     out.append(1)
+#   else:
+#     out.append(out[-1]+out[-2])
 
-print(f(int(input(""))))
+# print(','.join(str(v) for v in out))
+
+"""
+63
+
+Please write a program using generator to print the even numbers between 0 and n in comma separated form while n is input by console.
+
+Example: If the following n is given as input to the program:
+
+10
+Then, the output of the program should be:
+
+0,2,4,6,8,10
+"""
+
+def question63():
+  
