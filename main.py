@@ -808,14 +808,12 @@ Define a custom exception class which takes a string message as attribute.
 To define a custom exception, we need to define a class inherited from Exception.
 """
 
-
 # class OverZero(Exception):
-  # """
-  # Custom exception class.
+# """
+# Custom exception class.
 
-  # Returns error message if input greater than zero.
-  # """
-
+# Returns error message if input greater than zero.
+# """
 
 #   def __init__(self, msg):
 #     self.msg = msg
@@ -830,7 +828,6 @@ To define a custom exception, we need to define a class inherited from Exception
 #   OverZero("OK").message()
 
 # help(OverZero)
-
 """
 53
 
@@ -841,7 +838,6 @@ Assuming that we have some email addresses in the "username@companyname.com" for
 # e = "publiuscurtius@senate.im"
 
 # print(e.split('@')[0])
-
 """
 54
 
@@ -852,7 +848,6 @@ Assuming that we have some email addresses in the "username@companyname.com" for
 # x = "username@companyname.com"
 
 # print(x.split('@')[1].split('.')[0])
-
 """
 55
 
@@ -862,7 +857,6 @@ Write a program which accepts a sequence of words separated by whitespace as inp
 # x = "2 cats and 3 dogs".split(' ')
 
 # print([v for v in x if v.isdigit()])
-
 """
 56
 
@@ -871,7 +865,6 @@ Print a unicode string "hello world".
 """
 
 # print(u"Hello world")
-
 """
 57
 
@@ -879,7 +872,6 @@ Write a program to read an ASCII string and to convert it to a unicode string en
 """
 
 # print(input().encode('utf-8'))
-
 """
 58
 
@@ -889,7 +881,6 @@ Write a special comment to indicate a Python source code file is in unicode.
 """
 
 #-*- encoding: utf-8 -*-
-
 """
 59
 
@@ -904,13 +895,8 @@ Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console
 #     return print(round(sum([x/float(x+1) for x in np.arange(1,i+1,1)]),2))
 #   else:
 #     calculator(float(input("Enter integer greater than zero: ")))
-    
-  
 
 # calculator(float(input("Enter integer greater than zero: ")))
-
-
-
 """
 60
 
@@ -928,7 +914,6 @@ with a given n input by console (n>0).
 #   return f(n-1)+100
 
 # print(f(int(input())))
-
 """
 61
 
@@ -945,12 +930,11 @@ Please write a program to compute the value of f(n) with a given n input by cons
 #     return 0
 #   if n == 1:
 #     return 1
-#   return f(n-1)+f(n-2) 
+#   return f(n-1)+f(n-2)
 
 # print('Fibonacci sequence sums the two preceeding numbers usig the formula f(n-1)+f(n-2). For example, input of 7 returns 13 which is the sum of 5 (F(6)) and 3(F(5)).')
 
 # print(f(int(input(""))))
-
 """
 Question 62
 
@@ -981,7 +965,6 @@ Then, the output of the program should be:
 #     out.append(out[-1]+out[-2])
 
 # print(','.join(str(v) for v in out))
-
 """
 63
 
@@ -995,5 +978,24 @@ Then, the output of the program should be:
 0,2,4,6,8,10
 """
 
-def question63():
-  
+#NB the use of a generator is unnecessary.  comprehension is superior.
+
+# o = list((v for v in range(0, int(input()) + 1) if v % 2 == 0))
+
+# print(','.join([str(v) for v in o]))
+"""
+64
+
+Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+
+Example: If the following n is given as input to the program:
+
+100
+Then, the output of the program should be:
+
+0,35,70
+"""
+
+# o = list((v for v in range(0, int(input()) + 1) if v % 5 == 0 and v % 7 == 0))
+
+# print(','.join([str(v) for v in o]))
