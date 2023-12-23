@@ -999,3 +999,62 @@ Then, the output of the program should be:
 # o = list((v for v in range(0, int(input()) + 1) if v % 5 == 0 and v % 7 == 0))
 
 # print(','.join([str(v) for v in o]))
+
+"""
+65 
+
+Please write assert statements to verify that every number in the list [2,4,6,8] is even
+"""
+
+t = list(range(2,9,2))
+
+for n in t:
+  assert n%2 == 0
+
+"""
+66
+
+Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+
+Example: If the following n is given as input to the program:
+
+35 + 3
+Then, the output of the program should be:
+
+38
+"""
+
+#NB I did not use eval. Eval presents a critical security risk as it allows the user to access one's computer
+
+# import operator
+
+# ops = {
+#     '+' : operator.add,
+#     '-' : operator.sub,
+#     '*' : operator.mul,
+#     '/' : operator.truediv, 
+#     '%' : operator.mod,
+#     '^' : operator.xor,
+# }
+
+# x = input().split(' ')
+
+# print(ops[x[1]](int(x[0]),int(x[2])))
+
+"""
+67
+
+Question
+Please write a binary search function which searches an item in a sorted list. The function should return the index of element to be searched in the list.
+
+Hints
+Use if/elif to deal with conditions.
+"""
+
+l = [1,2,3,4,5]
+
+s = int(input())
+
+assert l.index(s)
+
+print(l.index(s))
