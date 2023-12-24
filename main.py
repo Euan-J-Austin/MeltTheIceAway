@@ -1057,14 +1057,76 @@ Use if/elif to deal with conditions.
 
 import bisect
 
-l = [1,2,3,4,5]
+import time
 
-def bisearch(v):
-  if v in l:
-    return print(f'Index of value is {bisect.bisect_left(l, v)}.')
-  else:
-    print('Value not in list. Search again.')
-    return bisearch(int(input()))
+import random
 
-bisearch(int(input()))
+import pandas as pd
 
+length_series = []
+bisect_times = []
+myfunc_times = []
+index_times = []
+
+x = 1
+
+while x < 7: 
+
+  e = 10**x
+
+  length_series.append(e)
+
+  v = random.randint(0,e+1)
+
+
+  elements = [x for x in range(0,e)]
+  
+  start = time.perf_counter()
+  
+  def bisearch(v):
+    if v in elements:
+      return print(f'Index of value is {bisect.bisect_left(elements, v)}.')
+    else:
+      print('Value not in list. Search again.')
+      return bisearch(int(input()))
+  
+  bisearch(v)
+  
+  stop = time.perf_counter()
+  
+  bisect_times.append(stop-start)
+  
+  start = time.perf_counter()
+  
+  def bounds(elements, v):
+    middle = elements[len(elements)// 2]
+    if v == middle:
+      return print(f'{v} is at index {elements.index(v)}.')
+    if v < middle:
+      return bounds(elements[:len(elements)//2], v)
+    if v > middle:
+      return bounds(elements[len(elements)//2:], v)
+  
+  bounds(elements, v)
+  
+  stop = time.perf_counter()
+  
+  myfunc_times.append(stop-start)
+  
+  start = time.perf_counter()
+  
+  print(elements.index(v))
+  
+  stop = time.perf_counter()
+  
+  index_times.append(stop-start)
+
+  x += 1
+
+d = {'Bisect': bisect_times, 'My_Binary_Search': myfunc_times, 'Index': index_times}
+
+df = pd.DataFrame(data=d, index=length_series)
+
+print(df)
+
+print(df.describe())
