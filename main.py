@@ -1051,10 +1051,20 @@ Hints
 Use if/elif to deal with conditions.
 """
 
+#Binary search identifies upper and lower bounds, examine middle elements is that correct? then forms new upper lower bound, new middle element etc
+
+#This is the simple solution using the bisect module which performs a binary search
+
+import bisect
+
 l = [1,2,3,4,5]
 
-s = int(input())
+def bisearch(v):
+  if v in l:
+    return print(f'Index of value is {bisect.bisect_left(l, v)}.')
+  else:
+    print('Value not in list. Search again.')
+    return bisearch(int(input()))
 
-assert l.index(s)
+bisearch(int(input()))
 
-print(l.index(s))
