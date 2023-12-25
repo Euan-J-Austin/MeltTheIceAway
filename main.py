@@ -1055,78 +1055,151 @@ Use if/elif to deal with conditions.
 
 #This is the simple solution using the bisect module which performs a binary search
 
-import bisect
+# import bisect
 
-import time
+# import time
 
-import random
+# import random
 
-import pandas as pd
+# import pandas as pd
 
-length_series = []
-bisect_times = []
-myfunc_times = []
-index_times = []
+# length_series = []
+# bisect_times = []
+# myfunc_times = []
+# index_times = []
 
-x = 1
+# x = 1
 
-while x < 7: 
+# while x < 7: 
 
-  e = 10**x
+#   e = 10**x
 
-  length_series.append(e)
+#   length_series.append(e)
 
-  v = random.randint(0,e+1)
+#   v = random.randint(0,e+1)
 
 
-  elements = [x for x in range(0,e)]
+#   elements = [x for x in range(0,e)]
   
-  start = time.perf_counter()
+#   start = time.perf_counter()
   
-  def bisearch(v):
-    if v in elements:
-      return print(f'Index of value is {bisect.bisect_left(elements, v)}.')
-    else:
-      print('Value not in list. Search again.')
-      return bisearch(int(input()))
+#   def bisearch(v):
+#     if v in elements:
+#       return print(f'Index of value is {bisect.bisect_left(elements, v)}.')
+#     else:
+#       print('Value not in list. Search again.')
+#       return bisearch(int(input()))
   
-  bisearch(v)
+#   bisearch(v)
   
-  stop = time.perf_counter()
+#   stop = time.perf_counter()
   
-  bisect_times.append(stop-start)
+#   bisect_times.append(stop-start)
   
-  start = time.perf_counter()
+#   start = time.perf_counter()
   
-  def bounds(elements, v):
-    middle = elements[len(elements)// 2]
-    if v == middle:
-      return print(f'{v} is at index {elements.index(v)}.')
-    if v < middle:
-      return bounds(elements[:len(elements)//2], v)
-    if v > middle:
-      return bounds(elements[len(elements)//2:], v)
+#   def bounds(elements, v):
+#     middle = elements[len(elements)// 2]
+#     if v == middle:
+#       return print(f'{v} is at index {elements.index(v)}.')
+#     if v < middle:
+#       return bounds(elements[:len(elements)//2], v)
+#     if v > middle:
+#       return bounds(elements[len(elements)//2:], v)
   
-  bounds(elements, v)
+#   bounds(elements, v)
   
-  stop = time.perf_counter()
+#   stop = time.perf_counter()
   
-  myfunc_times.append(stop-start)
+#   myfunc_times.append(stop-start)
   
-  start = time.perf_counter()
+#   start = time.perf_counter()
   
-  print(elements.index(v))
+#   print(elements.index(v))
   
-  stop = time.perf_counter()
+#   stop = time.perf_counter()
   
-  index_times.append(stop-start)
+#   index_times.append(stop-start)
 
-  x += 1
+#   x += 1
 
-d = {'Bisect': bisect_times, 'My_Binary_Search': myfunc_times, 'Index': index_times}
+# d = {'Bisect': bisect_times, 'My_Binary_Search': myfunc_times, 'Index': index_times}
 
-df = pd.DataFrame(data=d, index=length_series)
+# df = pd.DataFrame(data=d, index=length_series)
 
-print(df)
+# print(df)
 
-print(df.describe())
+# print(df.describe())
+
+"""
+
+68
+
+Please generate a random float where the value is between 10 and 100 using Python module.
+
+"""
+
+# import random
+
+# print(round(random.uniform(10,100),2))
+
+"""
+69
+
+Please generate a random float where the value is between 5 and 95 using Python module.
+
+"""
+
+# import random
+
+# print(round(random.uniform(5,95),2))
+
+"""
+70
+
+Please write a program to output a random even number between 0 and 10 inclusive using random module and list comprehension.
+"""
+
+# import random
+
+# print(round(random.choice([x for x in range(0,11,2)]),2))
+
+"""
+71
+
+Please write a program to output a random number, which is divisible by 5 and 7, between 10 and 150 inclusive using random module and list comprehension.
+"""
+
+# import random
+
+# print(round(random.choice([x for x in range(10,151) if x%5 ==0 and x%7 == 0]),2))
+
+"""
+72
+Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.
+"""
+# import random
+
+# print(random.choices([x for x in range(100,201)], weights=[1]*101, k=5))
+
+"""
+73
+
+Please write a program to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
+
+"""
+
+# import random
+
+# print(random.choices([x for x in range(100,201,2)], weights=[1]*51, k=5))
+
+"""
+74
+
+Please write a program to randomly generate a list with 5 numbers, which are divisible by 5 and 7 , between 1 and 1000 inclusive.
+
+"""
+
+# import random
+
+# print(random.sample([x for x in range(1,1001) if x%5 == 0 and x%7 ==0], 5))
