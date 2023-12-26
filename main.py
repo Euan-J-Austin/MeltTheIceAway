@@ -1203,3 +1203,33 @@ Please write a program to randomly generate a list with 5 numbers, which are div
 # import random
 
 # print(random.sample([x for x in range(1,1001) if x%5 == 0 and x%7 ==0], 5))
+
+"""
+
+75
+
+Please write a program to randomly print a integer number between 7 and 15 inclusive
+
+"""
+
+# import random
+
+# print(random.randrange(5,17))
+
+"""
+
+76
+
+Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".
+
+"""
+
+# import zlib
+
+# t = "hello world!hello world!hello world!hello world!"
+
+# t_compressed = zlib.compress(str.encode(t))
+
+# t_decompressed = zlib.decompress(t_compressed)
+
+# print(str(t_decompressed.decode()))
