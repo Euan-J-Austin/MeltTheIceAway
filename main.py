@@ -1233,3 +1233,51 @@ Please write a program to compress and decompress the string "hello world!hello 
 # t_decompressed = zlib.decompress(t_compressed)
 
 # print(str(t_decompressed.decode()))
+
+"""
+77
+
+Please write a program to print the running time of execution of "1+1" for 100 times.
+
+"""
+
+
+# import time
+
+# start = time.perf_counter()
+
+# for x in range(0,100):
+#   1+1
+
+# stop = time.perf_counter()
+
+# print(stop-start)
+
+"""
+78
+
+Please write a program to shuffle and print the list [3,6,7,8].
+
+"""
+
+# import random
+
+# x = [3,6,7,8]
+
+# random.shuffle(x)
+
+# print(x)
+
+"""
+79
+
+Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+
+"""
+# import random
+
+# pronoun = ["I", "You"]
+# verb = ["Play", "Love"]
+# noun = ["Hockey", "Football"]
+
+# print(pronoun[random.randint(0,1)] + " " + verb[ random.randint(0,1)] + " " + noun[random.randint(0,1)])
