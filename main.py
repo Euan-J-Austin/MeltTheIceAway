@@ -999,18 +999,16 @@ Then, the output of the program should be:
 # o = list((v for v in range(0, int(input()) + 1) if v % 5 == 0 and v % 7 == 0))
 
 # print(','.join([str(v) for v in o]))
-
 """
 65 
 
 Please write assert statements to verify that every number in the list [2,4,6,8] is even
 """
 
-t = list(range(2,9,2))
+t = list(range(2, 9, 2))
 
 for n in t:
-  assert n%2 == 0
-
+  assert n % 2 == 0
 """
 66
 
@@ -1032,7 +1030,7 @@ Then, the output of the program should be:
 #     '+' : operator.add,
 #     '-' : operator.sub,
 #     '*' : operator.mul,
-#     '/' : operator.truediv, 
+#     '/' : operator.truediv,
 #     '%' : operator.mod,
 #     '^' : operator.xor,
 # }
@@ -1040,7 +1038,6 @@ Then, the output of the program should be:
 # x = input().split(' ')
 
 # print(ops[x[1]](int(x[0]),int(x[2])))
-
 """
 67
 
@@ -1070,7 +1067,7 @@ Use if/elif to deal with conditions.
 
 # x = 1
 
-# while x < 7: 
+# while x < 7:
 
 #   e = 10**x
 
@@ -1078,26 +1075,25 @@ Use if/elif to deal with conditions.
 
 #   v = random.randint(0,e+1)
 
-
 #   elements = [x for x in range(0,e)]
-  
+
 #   start = time.perf_counter()
-  
+
 #   def bisearch(v):
 #     if v in elements:
 #       return print(f'Index of value is {bisect.bisect_left(elements, v)}.')
 #     else:
 #       print('Value not in list. Search again.')
 #       return bisearch(int(input()))
-  
+
 #   bisearch(v)
-  
+
 #   stop = time.perf_counter()
-  
+
 #   bisect_times.append(stop-start)
-  
+
 #   start = time.perf_counter()
-  
+
 #   def bounds(elements, v):
 #     middle = elements[len(elements)// 2]
 #     if v == middle:
@@ -1106,19 +1102,19 @@ Use if/elif to deal with conditions.
 #       return bounds(elements[:len(elements)//2], v)
 #     if v > middle:
 #       return bounds(elements[len(elements)//2:], v)
-  
+
 #   bounds(elements, v)
-  
+
 #   stop = time.perf_counter()
-  
+
 #   myfunc_times.append(stop-start)
-  
+
 #   start = time.perf_counter()
-  
+
 #   print(elements.index(v))
-  
+
 #   stop = time.perf_counter()
-  
+
 #   index_times.append(stop-start)
 
 #   x += 1
@@ -1130,7 +1126,6 @@ Use if/elif to deal with conditions.
 # print(df)
 
 # print(df.describe())
-
 """
 
 68
@@ -1142,7 +1137,6 @@ Please generate a random float where the value is between 10 and 100 using Pytho
 # import random
 
 # print(round(random.uniform(10,100),2))
-
 """
 69
 
@@ -1153,7 +1147,6 @@ Please generate a random float where the value is between 5 and 95 using Python 
 # import random
 
 # print(round(random.uniform(5,95),2))
-
 """
 70
 
@@ -1163,7 +1156,6 @@ Please write a program to output a random even number between 0 and 10 inclusive
 # import random
 
 # print(round(random.choice([x for x in range(0,11,2)]),2))
-
 """
 71
 
@@ -1173,7 +1165,6 @@ Please write a program to output a random number, which is divisible by 5 and 7,
 # import random
 
 # print(round(random.choice([x for x in range(10,151) if x%5 ==0 and x%7 == 0]),2))
-
 """
 72
 Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.
@@ -1181,7 +1172,6 @@ Please write a program to generate a list with 5 random numbers between 100 and 
 # import random
 
 # print(random.choices([x for x in range(100,201)], weights=[1]*101, k=5))
-
 """
 73
 
@@ -1192,7 +1182,6 @@ Please write a program to randomly generate a list with 5 even numbers between 1
 # import random
 
 # print(random.choices([x for x in range(100,201,2)], weights=[1]*51, k=5))
-
 """
 74
 
@@ -1203,7 +1192,6 @@ Please write a program to randomly generate a list with 5 numbers, which are div
 # import random
 
 # print(random.sample([x for x in range(1,1001) if x%5 == 0 and x%7 ==0], 5))
-
 """
 
 75
@@ -1215,7 +1203,6 @@ Please write a program to randomly print a integer number between 7 and 15 inclu
 # import random
 
 # print(random.randrange(5,17))
-
 """
 
 76
@@ -1233,14 +1220,12 @@ Please write a program to compress and decompress the string "hello world!hello 
 # t_decompressed = zlib.decompress(t_compressed)
 
 # print(str(t_decompressed.decode()))
-
 """
 77
 
 Please write a program to print the running time of execution of "1+1" for 100 times.
 
 """
-
 
 # import time
 
@@ -1252,7 +1237,6 @@ Please write a program to print the running time of execution of "1+1" for 100 t
 # stop = time.perf_counter()
 
 # print(stop-start)
-
 """
 78
 
@@ -1267,7 +1251,6 @@ Please write a program to shuffle and print the list [3,6,7,8].
 # random.shuffle(x)
 
 # print(x)
-
 """
 79
 
@@ -1281,3 +1264,54 @@ Please write a program to generate all sentences where subject is in ["I", "You"
 # noun = ["Hockey", "Football"]
 
 # print(pronoun[random.randint(0,1)] + " " + verb[ random.randint(0,1)] + " " + noun[random.randint(0,1)])
+"""
+80
+
+Please write a program to print the list after removing even numbers in [5,6,77,45,22,12,24].
+"""
+
+# print([x for x in [5,6,77,45,22,12,24] if x%2 != 0 ])
+"""
+81
+
+By using list comprehension, please write a program to print the list after removing numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
+"""
+
+# print([x for x in [12,24,35,70,88,120,155] if x%5 !=0 or x%7 != 0])
+"""
+82
+
+By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
+"""
+
+# l1 = [12,24,35,70,88,120,155]
+
+# l2 = [l1[x] for x in range(0,7,2)]
+
+# print([x for x in l1 if x not in l2])
+
+# l3 = enumerate(l1)
+
+# With enumerate
+
+# print([v for (i,v) in enumerate([12,24,35,70,88,120,155]) if i not in [0,2,4,6]])
+
+"""
+83
+
+By using list comprehension, please write a program to print the list after removing the 2nd - 4th numbers in [12,24,35,70,88,120,155].
+"""
+
+# print([v for (i, v) in enumerate([12,24,35,70,88,120,155]) if i not in [1,2,3]])
+
+"""
+84
+
+By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.
+"""
+
+# array = [[[0 for x in range(5)] for x in range(3)] for x in range(8)]
+
+# #[[[columns/length]rows/width]depth]
+
+# print(array)
