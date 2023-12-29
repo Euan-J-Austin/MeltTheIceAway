@@ -1315,3 +1315,64 @@ By using list comprehension, please write a program generate a 3*5*8 3D array wh
 # #[[[columns/length]rows/width]depth]
 
 # print(array)
+
+"""
+85
+
+By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+"""
+
+# print([v for (i, v) in enumerate([12,24,35,70,88,120,155]) if i not in [0,4,5]])
+
+"""
+86
+By using list comprehension, please write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155].
+
+"""
+
+# print([v for v in [12,24,35,24,88,120,155] if v != 24])
+
+"""
+87
+With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are intersection of the above given lists.
+"""
+
+# print([v for v in [1,3,6,78,35,55] if v in [12,24,35,24,88,120,155]])
+
+"""
+88
+
+With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate values with original order reserved.
+"""
+# l = [12,24,35,24,88,120,155,88,120,155]
+
+# l.reverse()
+
+# print(set(l))
+
+"""
+89
+
+Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+"""
+
+# class Person:
+#   def __init__(self):
+#     self.Gender = "Unknown."
+#   def getGender(self):
+#     return print(self.Gender)
+
+# class Male(Person):
+#   def __init__(self):
+#     self.Gender = "Male."
+
+# class Female(Person):
+#   def __init__(self):
+#     self.Gender = "Female."
+
+# m, f = Male(), Female()
+
+# m.getGender()
+# f.getGender()
+
+    
