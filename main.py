@@ -1375,4 +1375,95 @@ Define a class Person and its two child classes: Male and Female. All classes ha
 # m.getGender()
 # f.getGender()
 
-    
+
+"""
+90
+
+Please write a program which count and print the numbers of each character in a string input by console.
+
+Example: If the following string is given as input to the program:
+
+abcdefgabc
+Then, the output of the program should be:
+
+a,2
+c,2
+b,2
+e,1
+d,1
+g,1
+f,1
+
+"""
+
+# x = input("ENTER:")
+
+# d = {}
+
+# for c in x:
+#   d[c] = x.count(c)
+
+# print(d)
+
+"""
+Question 91
+
+Please write a program which accepts a string from console and print it in reverse order.
+
+Example: If the following string is given as input to the program:*
+
+rise to vote sir
+
+Then, the output of the program should be:
+
+ris etov ot esir
+
+"""
+
+# MY SOLUTION IS INCORRECT. I have reversed each word in place as opposed to reversing the entire string using string[::-1].
+
+# print(' '.join([x[::-1] for x in input("ENTER:").split(' ')]))
+
+"""
+QUESTION 92
+Please write a program which accepts a string from console and print the characters that have even indexes.
+
+Example: If the following string is given as input to the program:
+
+H1e2l3l4o5w6o7r8l9d
+Then, the output of the program should be:
+
+Helloworld
+"""
+
+# print(''.join([v for (i,v) in enumerate(input("ENTER:")) if i%2 == 0]))
+
+"""
+QUESTION 93
+
+Please write a program which prints all permutations of [1,2,3]
+"""
+# import itertools
+
+# for p in itertools.permutations([1,2,3]):
+#   print(p)
+
+"""
+QUESTION 94
+Write a program to solve a classic ancient Chinese puzzle: We count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?
+"""
+
+# R = 4 legs, 1 head
+# C = 2 legs, 1 head
+#As each animal can have only 1 head there must be 35 animals in total
+#Find out what combination of legs fit for 35 heads/animals 
+
+# r, c = 0, 0
+
+# for x in range(2,95,2):
+#   c += 1
+#   r = (94-x)/4
+#   if r + c == 35:
+#     print(f"{int(r)} rabbits and {c} chickens.")
+
+
