@@ -1005,6 +1005,9 @@ Then, the output of the program should be:
 Please write assert statements to verify that every number in the list [2,4,6,8] is even
 """
 
+from abc import abstractstaticmethod
+
+
 t = list(range(2, 9, 2))
 
 for n in t:
@@ -1467,3 +1470,103 @@ Write a program to solve a classic ancient Chinese puzzle: We count 35 heads and
 #     print(f"{int(r)} rabbits and {c} chickens.")
 
 
+"""
+95
+
+Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given scores. Store them in a list and find the score of the runner-up.
+
+If the following string is given as input to the program:
+
+5
+2 3 6 6 5
+Then, the output of the program should be:
+
+5
+"""
+
+# x = [int(x) for x in input().split(' ')]
+
+# print(x[x.index(max(x)) - 1]) 
+
+"""
+#96
+You are given a string S and width W. Your task is to wrap the string into a paragraph of width.
+
+If the following string is given as input to the program:
+
+ABCDEFGHIJKLIMNOQRSTUVWXYZ
+4
+Then, the output of the program should be:
+
+ABCD
+EFGH
+IJKL
+IMNO
+QRST
+UVWX
+YZ
+"""
+
+# s, w = input("ENTER STRING: "), int(input("ENTER WIDTH: "))
+
+# i = 0
+
+# while i < len(s):
+#   print(s[i:i+w])
+#   i += w
+
+"""
+97
+
+You are given an integer, N. Your task is to print an alphabet rangoli of size N. (Rangoli is a form of Indian folk art based on creation of patterns.)
+
+Different sizes of alphabet rangoli are shown below:
+
+#size 5
+
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+--e-d-c-b-c-d-e--
+----e-d-c-d-e----
+------e-d-e------
+--------e--------
+
+#size 3
+
+----c----
+--c-b-c--
+c-b-a-b-c
+--c-b-c--
+----c----
+"""
+
+#opening value will always be letters[-1] at centre
+#second line will be [-2] at center and [-1] two away then fill remaining with dash
+#remaining dash will be len(line) - distance to closest string value
+
+#INTERNAL horizontal SYMMETRY! 
+
+# import math
+
+# size = int(input("RANGOLI SIZE: "))
+# alphabet = [chr(v) for v in range(97, 123)]
+# c = 0
+
+# for x in range(size + (size-1)):
+#   letters = alphabet[:size]
+#   line = '-' * (1 + (size-1) * 4)
+#   line_list = list(line)
+#   if c == 0:
+#     i = math.floor(len(line)/2)
+#     del line_list[i]
+#     line_list.insert(i, letters[-1])
+#     print(''.join(line_list))
+
+s = '-----e-'
+
+print(s)
+print(s[::-1])
+  
