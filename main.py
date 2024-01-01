@@ -1549,24 +1549,49 @@ c-b-a-b-c
 
 #INTERNAL horizontal SYMMETRY! 
 
-# import math
+size = int(input("RANGOLI SIZE: "))
+alphabet = [chr(v) for v in range(97, 123)]
 
-# size = int(input("RANGOLI SIZE: "))
-# alphabet = [chr(v) for v in range(97, 123)]
-# c = 0
+letters = alphabet[:size]
+line = 1 #3
+central = letters[-line]
+ex_part = size + (size-2)
+dash = '-'
 
-# for x in range(size + (size-1)):
-#   letters = alphabet[:size]
-#   line = '-' * (1 + (size-1) * 4)
-#   line_list = list(line)
-#   if c == 0:
-#     i = math.floor(len(line)/2)
-#     del line_list[i]
-#     line_list.insert(i, letters[-1])
-#     print(''.join(line_list))
+out = """"""
 
-s = '-----e-'
+while line < size+1:
+  #OPENING LINE
+  if line == 1:
+     out += (dash*ex_part)+central+(dash*ex_part)
+     line += 1
+  #CLOSING LINE
+  if line == size:
+    i = int(letters.index(central)) 
+    ex_part2 = size + (size - 4) 
+    part_line = '' 
+    for c in range(line-1):
+      part_line += dash
+      part_line += letters[-i]
+      i -= 1
+    full_line = part_line
+    out += '\n'+full_line[::-1]+letters[0]+full_line
+    break
+  #IN-BETWEEN LINES
+  if line > 1:
+    i = int(letters.index(central)) 
+    ex_part2 = size + (size - 4) 
+    part_line = '' 
+    for c in range(line-1):
+      part_line += dash
+      part_line += letters[i]
+    full_line = part_line + (dash*ex_part2)
+    out += '\n'+full_line[::-1]+letters[i-1]+full_line
+    i -= 1
+    ex_part2 -= 2
+    part_line = ''
+    line += 1
 
-print(s)
-print(s[::-1])
-  
+line_length = (ex_part*2)+1
+    
+print(out)
