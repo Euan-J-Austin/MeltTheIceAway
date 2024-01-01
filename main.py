@@ -1543,55 +1543,37 @@ c-b-a-b-c
 ----c----
 """
 
-#opening value will always be letters[-1] at centre
-#second line will be [-2] at center and [-1] two away then fill remaining with dash
-#remaining dash will be len(line) - distance to closest string value
-
-#INTERNAL horizontal SYMMETRY! 
-
 size = int(input("RANGOLI SIZE: "))
-alphabet = [chr(v) for v in range(97, 123)]
-
-letters = alphabet[:size]
-line = 1 #3
-central = letters[-line]
-ex_part = size + (size-2)
-dash = '-'
-
+letters = [chr(v) for v in range(97, 123)][:size]
 out = """"""
 
+global line
+line = 1
+ex_part = size + (size-2) # length of external dashes for first and last line
+ex_part2 = size + (size - 4) #length of external dashes (not contained within letters) for all other lines
+
 while line < size+1:
+  dash = '-'
+
+  #ALL EXCLUDING OPENING LINE
+  if line > 1:
+    i = int(line) # 2
+    part_line = '' 
+    for c in range(line-1): #1
+      part_line += dash
+      part_line += letters[-(i-1)] # e
+      i -= 1
+    full_line = part_line + (dash*ex_part2)
+    out += '\n'+full_line[::-1]+letters[-line]+full_line
+    ex_part2 -= 2
+    line += 1
+    
   #OPENING LINE
   if line == 1:
-     out += (dash*ex_part)+central+(dash*ex_part)
+     out += '\n'+(dash*ex_part)+letters[size-1]+(dash*ex_part)
      line += 1
-  #CLOSING LINE
-  if line == size:
-    i = int(letters.index(central)) 
-    ex_part2 = size + (size - 4) 
-    part_line = '' 
-    for c in range(line-1):
-      part_line += dash
-      part_line += letters[-i]
-      i -= 1
-    full_line = part_line
-    out += '\n'+full_line[::-1]+letters[0]+full_line
-    break
-  #IN-BETWEEN LINES
-  if line > 1:
-    i = int(letters.index(central)) 
-    ex_part2 = size + (size - 4) 
-    part_line = '' 
-    for c in range(line-1):
-      part_line += dash
-      part_line += letters[i]
-    full_line = part_line + (dash*ex_part2)
-    out += '\n'+full_line[::-1]+letters[i-1]+full_line
-    i -= 1
-    ex_part2 -= 2
-    part_line = ''
-    line += 1
 
-line_length = (ex_part*2)+1
-    
-print(out)
+total_width = ((size + (size-2)) * 2) + 2
+
+out_less_centre = out[:-total_width]
+print(out,'\n'+out_less_centre[::-1])
