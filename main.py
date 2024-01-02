@@ -1543,37 +1543,62 @@ c-b-a-b-c
 ----c----
 """
 
-size = int(input("RANGOLI SIZE: "))
-letters = [chr(v) for v in range(97, 123)][:size]
-out = """"""
+# size = int(input("RANGOLI SIZE: "))
+# letters = [chr(v) for v in range(97, 123)][:size]
+# out = """"""
 
-global line
-line = 1
-ex_part = size + (size-2) # length of external dashes for first and last line
-ex_part2 = size + (size - 4) #length of external dashes (not contained within letters) for all other lines
+# global line
+# line = 1
+# ex_part = size + (size-2) # length of external dashes for first and last line
+# ex_part2 = size + (size - 4) #length of external dashes (not contained within letters) for all other lines
 
-while line < size+1:
-  dash = '-'
+# while line < size+1:
+#   dash = '-'
 
-  #ALL EXCLUDING OPENING LINE
-  if line > 1:
-    i = int(line) # 2
-    part_line = '' 
-    for c in range(line-1): #1
-      part_line += dash
-      part_line += letters[-(i-1)] # e
-      i -= 1
-    full_line = part_line + (dash*ex_part2)
-    out += '\n'+full_line[::-1]+letters[-line]+full_line
-    ex_part2 -= 2
-    line += 1
+#   #ALL EXCLUDING OPENING LINE
+#   if line > 1:
+#     i = int(line) # 2
+#     part_line = '' 
+#     for c in range(line-1): #1
+#       part_line += dash
+#       part_line += letters[-(i-1)] # e
+#       i -= 1
+#     full_line = part_line + (dash*ex_part2)
+#     out += '\n'+full_line[::-1]+letters[-line]+full_line
+#     ex_part2 -= 2
+#     line += 1
     
-  #OPENING LINE
-  if line == 1:
-     out += '\n'+(dash*ex_part)+letters[size-1]+(dash*ex_part)
-     line += 1
+#   #OPENING LINE
+#   if line == 1:
+#      out += '\n'+(dash*ex_part)+letters[size-1]+(dash*ex_part)
+#      line += 1
 
-total_width = ((size + (size-2)) * 2) + 2
+# total_width = ((size + (size-2)) * 2) + 2
 
-out_less_centre = out[:-total_width]
-print(out,'\n'+out_less_centre[::-1])
+# out_less_centre = out[:-total_width]
+# print(out,'\n'+out_less_centre[::-1])
+
+"""
+98
+You are given a date. Your task is to find what the day is on that date.
+
+Input
+
+A single line of input containing the space separated month, day and year, respectively, in MM DD YYYY format.
+
+08 05 2015
+Output
+
+Output the correct day in capital letters.
+
+WEDNESDAY
+"""
+
+from datetime import datetime
+
+d=input("MM DD YYYY").replace(' ','-')
+
+d = datetime.strptime(d,'%m-%d-%Y')
+
+print(d.strftime('%A'))
+
