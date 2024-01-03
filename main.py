@@ -1594,11 +1594,46 @@ Output the correct day in capital letters.
 WEDNESDAY
 """
 
-from datetime import datetime
+# from datetime import datetime
 
-d=input("MM DD YYYY").replace(' ','-')
+# d=input("MM DD YYYY")
 
-d = datetime.strptime(d,'%m-%d-%Y')
+# d = datetime.strptime(d,'%m %d %Y')
 
-print(d.strftime('%A'))
+# print(d.strftime('%A'))
+
+"""
+Q99
+
+Given 2 sets of integers, M and N, print their symmetric difference in ascending order. The term symmetric difference indicates those values that exist in either M or N but do not exist in both.
+
+Input
+
+The first line of input contains an integer, M.The second line contains M space-separated integers.The third line contains an integer, N.The fourth line contains N space-separated integers.
+
+4
+2 4 5 9
+4
+2 4 11 12
+Output
+
+Output the symmetric difference integers in ascending order, one per line.
+
+5
+9
+11
+12  
+"""
+
+import numpy.random as r
+
+def symdif(m,n):
+  set1 = set(r.randint(0,20) for x in range(0,m+1))
+  set2 = set(r.randint(0,20) for x in range(0,n+1))
+  out = list((set1.difference(set2)))
+  for x in out:
+    print(x)
+  return print('END.')
+  
+symdif(20,20)
 
