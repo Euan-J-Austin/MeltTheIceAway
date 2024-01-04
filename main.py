@@ -1625,15 +1625,46 @@ Output the symmetric difference integers in ascending order, one per line.
 12  
 """
 
+# import numpy.random as r
+
+# def symdif(m,n):
+#   set1 = set(r.randint(0,20) for x in range(0,m+1))
+#   set2 = set(r.randint(0,20) for x in range(0,n+1))
+#   out = list((set1.difference(set2)))
+#   for x in out:
+#     print(x)
+#   return print('END.')
+  
+# symdif(20,20)
+
+
+"""
+100
+
+You are given words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
+
+If the following string is given as input to the program:
+
+4
+bcdef
+abcdefg
+bcde
+bcdef
+Then, the output of the program should be:
+
+3
+2 1 1
+"""
+
 import numpy.random as r
 
-def symdif(m,n):
-  set1 = set(r.randint(0,20) for x in range(0,m+1))
-  set2 = set(r.randint(0,20) for x in range(0,n+1))
-  out = list((set1.difference(set2)))
-  for x in out:
-    print(x)
-  return print('END.')
+def word_count(i):
+  letters = ['a','b','c','d','e','f','g']
+  words = [''.join([letters[r.randint(0,len(letters))] for _ in range(0,r.randint(1,3))]) for _ in range(i+1)]
+  d = {}
+  for w in words:
+    d.update({w: words.count(w)})
+  for n in dict(sorted(d.items(), key=lambda item: item[1], reverse=True)).values():
+    print(n)
   
-symdif(20,20)
-
+word_count(int(input("Enter integer:")))
