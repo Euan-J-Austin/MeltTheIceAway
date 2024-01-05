@@ -1656,15 +1656,43 @@ Then, the output of the program should be:
 2 1 1
 """
 
-import numpy.random as r
+# import numpy.random as r
 
-def word_count(i):
-  letters = ['a','b','c','d','e','f','g']
-  words = [''.join([letters[r.randint(0,len(letters))] for _ in range(0,r.randint(1,3))]) for _ in range(i+1)]
-  d = {}
-  for w in words:
-    d.update({w: words.count(w)})
-  for n in dict(sorted(d.items(), key=lambda item: item[1], reverse=True)).values():
-    print(n)
+# def word_count(i):
+#   letters = ['a','b','c','d','e','f','g']
+#   words = [''.join([letters[r.randint(0,len(letters))] for _ in range(0,r.randint(1,3))]) for _ in range(i+1)]
+#   d = {}
+#   for w in words:
+#     d.update({w: words.count(w)})
+#   for n in dict(sorted(d.items(), key=lambda item: item[1], reverse=True)).values():
+#     print(n)
   
-word_count(int(input("Enter integer:")))
+# word_count(int(input("Enter integer:")))
+
+"""
+101
+
+You are given a string.Your task is to count the frequency of letters of the string and print the letters in descending order of frequency.
+
+If the following string is given as input to the program:
+
+aabbbccde
+Then, the output of the program should be:
+
+b 3
+a 2
+c 2
+d 1
+e 1
+
+"""
+
+def letter_count(s):
+  letters = [l for l in s]
+  d = {l: letters.count(l) for l in letters}
+  for e in sorted(d.items(), key = lambda item: item[1]):
+    print(e[0],e[1])
+
+letter_count(input())
+
+
