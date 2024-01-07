@@ -1687,12 +1687,66 @@ e 1
 
 """
 
-def letter_count(s):
-  letters = [l for l in s]
-  d = {l: letters.count(l) for l in letters}
-  for e in sorted(d.items(), key = lambda item: item[1]):
-    print(e[0],e[1])
+# def letter_count(s):
+#   letters = [l for l in s]
+#   d = {l: letters.count(l) for l in letters}
+#   for e in sorted(d.items(), key = lambda item: item[1]):
+#     print(e[0],e[1])
 
-letter_count(input())
+# letter_count(input())
+
+"""
+102
+
+Question
+Write a Python program that accepts a string and calculate the number of digits and letters.
+
+Input
+
+Hello321Bye360
+Output
+
+Digit - 6
+Letter - 8
+"""
+
+#reused this from a previous question
+
+# def digitletter(x):
+#    return print(f'LETTERS - {len([v for v in x if ord(v) in range(65, 91) or ord(v) in range(97,123)])}\nDIGIT - {len([v for v in x if ord(v) in range(48,58)])}')
+
+# digitletter(input())
+
+"""
+103 
+
+Question
+Given a number N.Find Sum of 1 to N Using Recursion
+
+Input
+
+5
+Output
+
+15
+
+"""
+
+# n = 0
+
+# for x in range(1,6):
+#   n+=x
+
+# print(n)
+
+#darprinx's solution
+
+# def rec(n):
+#   if n == 0:
+#       return n
+#   return rec(n-1) + n # added/returned to the sum variable each time (5+4+3+2+1), then 0 so returned 15
 
 
+# n = int(input())
+# sum = rec(n)
+# print(sum)
